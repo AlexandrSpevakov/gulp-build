@@ -10,18 +10,6 @@ export default {
       dest: pathDest,
    },
 
-   pug: {
-      src: pathSrc + '/pug/*.pug',
-      watch: pathSrc + '/pug/**/*.pug',
-      dest: pathDest,
-   },
-
-   css: {
-      src: pathSrc + '/css/*.css',
-      watch: pathSrc + '/css/**/*.css',
-      dest: pathDest + '/css',
-   },
-
    scss: {
       src: pathSrc + '/scss/*.{scss, sass}',
       watch: pathSrc + '/scss/**/*.{scss, sass}',
