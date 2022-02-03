@@ -2,6 +2,7 @@ import gulp from 'gulp';
 
 // Configurations
 import path from '../config/path.js';
+import app from '../config/app.js';
 
 // Plugins
 import autoprefixer from 'gulp-autoprefixer';
@@ -19,7 +20,7 @@ export default () => {
    return gulp.src(path.scss.src, { sourcemaps: true })
       .pipe(sass())
       .pipe(webpCss())
-      .pipe(autoprefixer())
+      .pipe(autoprefixer(app.autoprefixer))
       // .pipe(size({ title: 'main.css' }))
       // .pipe(gulp.dest(path.scss.dest, { sourcemaps: true }))
       // .pipe(rename({ suffix: '.min' }))

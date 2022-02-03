@@ -9,6 +9,11 @@ export default {
       collapseWhitespace: true,
    },
 
+   autoprefixer: {
+      grid: true,
+      cascade: true,
+   },
+
    webpack: {
       mode: 'production',
    },
