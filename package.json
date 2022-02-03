@@ -4,8 +4,8 @@
    "description": "",
    "main": "gulpfile.js",
    "scripts": {
-      "start": "gulp --experimental-json-modules",
-      "build": "gulp --production --experimental-json-modules"
+      "start": "gulp",
+      "build": "gulp --production"
    },
    "browserslist": [
       "last 3 versions"
