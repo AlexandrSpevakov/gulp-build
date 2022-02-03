@@ -10,8 +10,8 @@ import clear from './task/clear.js';
 import pug from './task/pug.js';
 // const scss = require('./task/scss');
 // const js = require('./task/js');
-// const font = require('./task/font');
 import img from './task/img.js';
+import font from './task/font.js';
 
 // Server
 const server = () => {
@@ -27,11 +27,11 @@ const watcher = () => {
    gulp.watch(path.pug.watch, pug).on('all', browserSync.reload);
    // watch(path.scss.watch, scss).on('all', browserSync.reload);
    // watch(path.js.watch, js).on('all', browserSync.reload);
-   // watch(path.img.watch, img).on('all', browserSync.reload);
+   gulp.watch(path.img.watch, img).on('all', browserSync.reload);
    gulp.watch(path.font.watch, font).on('all', browserSync.reload);
 };
 
-const build = gulp.series(clear, gulp.parallel(pug, img /*scss, js, font*/));
+const build = gulp.series(clear, gulp.parallel(pug, img, font /*scss, js*/));
 
 const dev = gulp.series(build, gulp.parallel(watcher, server));
 
@@ -40,8 +40,8 @@ export { clear };
 export { pug };
 // exports.scss = scss;
 // exports.js = js;
-// exports.font = font;
 export { img };
+export { font };
 
 // Build
 export default app.isProd ? build : dev;
