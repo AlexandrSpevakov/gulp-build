@@ -19,6 +19,10 @@ export default {
    },
 
    imagemin: {
+      progressive: true,
+      svgoPlugins: [{ removeViewBox: false }],
+      interlaced: true,
+      optimizationLevel: 3,
       verbose: true,
    },
 
