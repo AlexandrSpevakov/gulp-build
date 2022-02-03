@@ -9,10 +9,10 @@ import csso from 'gulp-csso';
 // import rename from 'gulp-rename';
 // import size from 'gulp-size';
 import webpCss from 'gulp-webp-css';
-import compilerSass from 'sass';
+import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 
-const sass = gulpSass(compilerSass);
+const sass = gulpSass(dartSass);
 
 // Processing SCSS
 export default () => {
