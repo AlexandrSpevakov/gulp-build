@@ -8,7 +8,7 @@ export default {
    isDev: isDev,
 
    htmlmin: {
-      collapseWhitespace: isProd,
+      collapseWhitespace: true,
    },
 
    pug: {
