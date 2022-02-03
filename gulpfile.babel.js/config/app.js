@@ -19,7 +19,7 @@ export default {
    },
 
    webpack: {
-      mode: isProd ? 'production' : 'development',
+      mode: 'production',
    },
 
    imagemin: {
